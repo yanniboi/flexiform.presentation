@@ -35,223 +35,278 @@
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
+
+
 <div class="slides">
     <section>
         <h1>Flexiform</h1>
-        <div>
-            <br>
-        </div>
-        <div>How to build powerful, simple,&nbsp;</div>
-        <div>multiple entity create/edit forms in Drupal 7<br>
-        </div>
-        <div>
-            <br>
-        </div>
-        <div>
-            <br>
-        </div>
-        <div>
-            <br>
-        </div>
-        <div>http://drupal.org/project/flexiform</div>
-        <div>
-            <br>
-        </div>
-        <div>Yan Loetzer (yanniboi)</div>
-        <div>@yanni_boi</div>
-    </section>
-    <section>
-        <h2>We All Use Forms</h2>
-        <div>
-            <br>
-        </div>
-        <div style="text-align: center;">Drupal forms are:</div>
-        <div style="text-align: center;">
-            <br>
-        </div>
-        <div style="text-align: center;">
-            <ul>
-                <li>Powerful</li>
-                <li>Flexible</li>
-                <li>Extendible</li>
-            </ul>
-            <div style="text-align: left;">
-                <br>
-            </div>
-            <blockquote>
-                <b style="text-align: left;">Great!</b>
-                <br>
-            </blockquote>
-            <div style="text-align: left;">
-                <br>
-            </div>
-            <div style="text-align: center;">
-                <br>
-            </div>
-            <div style="text-align: center;">...and so are the Form API references</div>
-        </div>
-    </section>
-    <section>
-        <h2>There are different ways to Write these Forms</h2>
-        <div>
-            <br>
-        </div>
-        <div>
-            <br>
-        </div>
-        <div>
-            <ul>
-                <li>Custom code</li>
-                <li>Webform module</li>
-                <li>Entityform module</li>
-                <li>Form Builder module</li>
-                <li>Quick Forms (qforms) module</li>
-            </ul>
-            <div style="text-align: left;">
-                <br>
-            </div>
-        </div>
-        <div style="text-align: center;">
-            <br>
-        </div>
-        <div style="text-align: center;">And many others...</div>
-    </section>
-    <section>
-        <section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/yanlotzer/images/171168/5345775558_045f3da1cb_o.jpg" data-background-size="cover">
-            <h2>
-                <br>
-            </h2>
-            <div>
-                <br>
-            </div>
-            <div>
-                <br>
-            </div>
-            <div>
-                <br>
-            </div>
-            <div>
-                <br>
-            </div>
-            <div>
-                <br>
-            </div>
-            <div>
-                <span style="font-size: 112px; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.45098);">&nbsp;FIGHT!!&nbsp;</span>
-                <br>
-            </div>
-        </section>
-        <section>
-            <div>
-                <div>
-                    <font face="League Gothic, Impact, sans-serif">
-                        <span style="font-size: 76.14213562011719px; text-transform: uppercase;">Webform</span>
-                    </font>
-                </div>
-            </div>
-            <div>
-                <br>
-            </div>
-            <div>
-                <h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Pros</h4>
-                <ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
-                    <li>Has been around for a long time</li>
-                    <li>Lots of form elements to choose from</li>
-                </ul>
-                <h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Cons</h4>
-                <ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
-                    <li>Submissions aren't stored as entities</li>
-                    <li>Requires lots of Contrib modules</li>
-                    <li>Difficult to integrate with other modules</li>
-                    <li>Cannot edit entities using the web forms</li>
-                    <li>Drupal 8?</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <h2>Entityforms</h2>
-            <div>
-                <br>
-            </div>
-            <div>
-                <h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Pros</h4>
-                <ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
-                    <li>Uses the entity API</li>
-                    <li>Use any provided field types for entities</li>
-                    <li>Integrates with other 'entity' based modules</li>
-                    <li>Entityform is fairly well established.</li>
-                </ul>
-                <h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Cons</h4>
-                <ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
-                    <li>Cannot edit (other) entities using the web forms</li>
-                    <li>You can only have one form for each bundle.</li>
-                    <li>Can't add custom markup to forms.</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <h2>What I want!</h2>
-            <div>
-                <br>
-            </div>
-            <div>
-                <ul>
-                    <li>Create and edit entities on form submission</li>
-                    <li>Use fields from multiple entities</li>
-                    <li>Build multiple forms for same entities</li>
-                    <li>Add blocks and custom html to forms/submissions</li>
-                    <li>
-                        <br>
-                    </li>
-                </ul>
-                <div style="text-align: left;">
-                    <br>
-                </div>
-            </div>
-            <div style="text-align: left;">
-                <br>
-            </div>
-            <div style="text-align: left;">
-                <br>
-            </div>
-            <div style="text-align: left;">
-                <br>
-            </div>
-            <div style="text-align: center;">In short...</div>
-        </section>
-    </section>
-    <section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/yanlotzer/images/171163/Flexiform.jpg" data-background-size="cover">
-        <h2>
-            <br>
-        </h2>
-        <div>
-            <br>
-        </div>
-        <div>
-            <br>
-        </div>
-    </section>
-    <section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/yanlotzer/images/171216/flexiform.png">
-        <h2>
-            <span style="background-color: rgb(0, 0, 0);">
-                <br>
-            </span>
-        </h2>
-        <h2>
-            <span style="background-color: rgb(0, 0, 0);">
-                <br>
-            </span>
-        </h2>
-        <h2>
-            <span style="background-color: rgb(0, 0, 0);">
-                <br>
-            </span>
-        </h2>
-        <h2>
-            <span style="background-color: rgba(0, 0, 0, 0.74902);">&nbsp;Lets see some Code&nbsp;</span>
-        </h2>
-    </section>
+<div>
+        <br>
+    </div>
+<div>How to build powerful, simple,&nbsp;</div>
+<div>multiple entity create/edit forms in Drupal 7<br>
 </div>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>http://drupal.org/project/flexiform</div>
+<div>
+<br>
+</div>
+<div>Yan Loetzer (yanniboi)</div>
+<div>@yanni_boi</div>
+</section>
+<section>
+    <h2>We All Use Forms</h2>
+<div>
+    <br>
+</div>
+<div style="text-align: center;">Drupal forms are:</div>
+<div style="text-align: center;">
+<br>
+</div>
+<div style="text-align: center;">
+<ul>
+<li>Powerful</li>
+<li>Flexible</li>
+<li>Extendible</li>
+</ul>
+<div style="text-align: left;">
+<br>
+</div>
+<blockquote>
+<b style="text-align: left;">Great!</b>
+<br>
+</blockquote>
+<div style="text-align: left;">
+<br>
+</div>
+<div style="text-align: center;">
+<br>
+</div>
+<div style="text-align: center;">...and so are the Form API references</div>
+</div>
+</section>
+<section>
+    <h2>There are different ways to Write these Forms</h2>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<ul>
+<li>Custom code</li>
+<li>Webform module</li>
+<li>Entityform module</li>
+<li>Form Builder module</li>
+<li>Quick Forms (qforms) module</li>
+</ul>
+<div style="text-align: left;">
+<br>
+</div>
+</div>
+<div style="text-align: center;">
+<br>
+</div>
+<div style="text-align: center;">And many others...</div>
+</section>
+<section>
+    <section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/yanlotzer/images/171168/5345775558_045f3da1cb_o.jpg" data-background-size="cover">
+        <h2>
+            <br>
+        </h2>
+<div>
+        <br>
+    </div>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<span style="font-size: 112px; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.45098);">&nbsp;FIGHT!!&nbsp;</span>
+<br>
+</div>
+<div>
+<span style="font-size: 112px; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.45098);">
+    <br>
+</span>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section>
+    <div>
+        <div>
+            <font face="League Gothic, Impact, sans-serif">
+                <span style="font-size: 76.14213562011719px; text-transform: uppercase;">Webform</span>
+            </font>
+        </div>
+    </div>
+<div>
+    <br>
+</div>
+<div>
+<h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Pros</h4>
+<ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
+<li>Has been around for a long time</li>
+<li>Lots of form elements to choose from</li>
+</ul>
+<h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Cons</h4>
+<ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
+<li>Submissions aren't stored as entities</li>
+<li>Requires lots of Contrib modules</li>
+<li>Difficult to integrate with other modules</li>
+<li>Cannot edit entities using the web forms</li>
+<li>Drupal 8?</li>
+</ul>
+</div>
+</section>
+<section>
+    <h2>Entityforms</h2>
+<div>
+    <br>
+</div>
+<div>
+<h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Pros</h4>
+<ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
+<li>Uses the entity API</li>
+<li>Use any provided field types for entities</li>
+<li>Integrates with other 'entity' based modules</li>
+<li>Entityform is fairly well established.</li>
+</ul>
+<h4 style="margin-top: 0.5em; margin-bottom: 0.166667em;">Cons</h4>
+<ul style="margin-bottom: 0.692em; margin-left: 0px; padding-left: 2em; list-style-position: initial; list-style-image: initial;">
+<li>Cannot edit (other) entities using the web forms</li>
+<li>You can only have one form for each bundle.</li>
+<li>Can't add custom markup to forms.</li>
+</ul>
+</div>
+</section>
+<section>
+    <h2>What I want!</h2>
+<div>
+    <br>
+</div>
+<div>
+<ul>
+<li>Create and edit entities on form submission</li>
+<li>Use fields from multiple entities</li>
+<li>Build multiple forms for same entities</li>
+<li>Add blocks and custom html to forms/submissions</li>
+<li>
+<br>
+</li>
+</ul>
+<div style="text-align: left;">
+<br>
+</div>
+</div>
+<div style="text-align: left;">
+<br>
+</div>
+<div style="text-align: left;">
+<br>
+</div>
+<div style="text-align: left;">
+<br>
+</div>
+<div style="text-align: center;">In short...</div>
+</section>
+</section>
+<section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/yanlotzer/images/171163/Flexiform.jpg" data-background-size="cover">
+    <h2>
+        <br>
+    </h2>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/yanlotzer/images/171216/flexiform.png">
+    <h2>
+        <span style="background-color: rgb(0, 0, 0);">
+            <br>
+        </span>
+    </h2>
+<h2>
+    <span style="background-color: rgb(0, 0, 0);">
+        <br>
+    </span>
+</h2>
+<h2>
+<span style="background-color: rgb(0, 0, 0);">
+    <br>
+</span>
+</h2>
+<h2>
+<span style="background-color: rgba(0, 0, 0, 0.74902);">&nbsp;Lets see some action!!&nbsp;</span>
+</h2>
+</section>
+<section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/yanlotzer/images/178556/545653437_5a1b7b17c0_b.jpg">
+    <h2>
+        <br>
+    </h2>
+    <h2>
+        <br>
+    </h2>
+    <h2>
+        <br>
+    </h2>
+    <h2>
+        <br>
+    </h2>
+</section>
+<section>
+    <h1 style="font-style: normal; font-variant: normal;">Thank you</h1>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">
+        <br>
+    </div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">How to build powerful, simple,&nbsp;</div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">multiple entity create/edit forms in Drupal 7<br>
+    </div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">
+        <br>
+    </div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">
+        <br>
+    </div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">
+        <br>
+    </div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">http://drupal.org/project/flexiform</div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">
+        <br>
+    </div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">Yan Loetzer (yanniboi)</div>
+    <div style="font-size: 36px; font-style: normal; font-variant: normal;">@yanni_boi</div>
+</section>
+</div>
+
 
 
 		</div>
